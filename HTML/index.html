@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="/CSS/style.css" >
+    <link rel="shortcut icon" href="/Images/glitch-abstract-logo_23-2148934544.avif">
+    <link rel="stylesheet" href="/CSS/PlaceBid.css">
+    <script src="/JavaScript/placebid.js"></script>
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="/CSS/indexfooterstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="body">
+    <header>
+        <div class="container">
+            <div class="header-right">
+                <div class="header-nav-wrapper">
+                    <ul class="navbar-listing">
+                        <a href="#" class="logo">
+                            <img src="/Images/preview.avif" height="50px" alt="" srcset="">
+                        </a>
+                        <li><a href="#explore">HOME</a></li>
+                        <li><a href="/HTML/About.html">about</a></li>
+                        <li><a href="/HTML/Creators.html">Creators</a></li>
+                        <li><a href="/HTML/Collections.html">Collections</a></li>
+                        <li><a href="#">Blog</a></li>
+                        
+
+                    </ul>
+
+                </div>
+                <div class="header-actions">
+                    <input type="search" placeholder="Search" class="search-field">
+
+                    <a href="/HTML/Login.html"><button class="btn btn-primary">Sign in</button></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <style>
+        .contents {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        h2,
+        p {
+            font-size: 24px;
+        }
+
+        .content-wrapper {
+            flex-basis: 30%;
+            margin-right: 20px;
+        }
+
+        .content-image {
+            max-width: 100%;
+            border-radius: 50%;
+            flex-basis: 35%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .contents {
+                flex-direction: column;
+            }
+
+            .content-wrapper {
+                margin-right: 0;
+            }
+
+            .content-image {
+                margin-top: 20px;
+                flex-basis: 100%;
+            }
+        }
+    </style>
+    <div class="contents" style="padding: 100px;">
+        <div class="content-wrapper">
+            <h2>Welcome to Our NFT Creators Section</h2>
+            <p>Otherdeed is the key to claiming land in Otherside.
+                Each have a unique blend of environment and sediment —
+                some with resources, some home to powerful
+                <span id="dots">...</span><span id="more">artifacts. And on a very few, a Koda roams.</span>
+            </p>
+            <button style="margin-top: 1%;" onclick="myFunction()" id="myBtn">See more ...</button>
+        </div>
+        <img src="/Images/Cyrpto Images/hero-banner.jpg" alt="Your Image" class="content-image">
+    </div>
+
+
+    <main class="new-product , main-section">
+        <div class="container">
+
+            <div id="explore" class="section-header-wrapper">
+
+                <h2 class="h2 section-title" style="color:yellow">Newest Items</h2>
+
+             
+            </div>
+            <script>
+                function toggleProducts() {
+                    var productCards = document.getElementsByClassName("product-item");
+                    var viewAllBtn = document.getElementById("viewAllBtn");
+            
+                    if (viewAllBtn.innerText === "View all") {
+                        // Show all products
+                        for (var i = 0; i < productCards.length; i++) {
+                            productCards[i].style.display = "block";
+                        }
+                        viewAllBtn.innerText = "Hide all";
+                    } else {
+                        // Hide all products
+                        for (var i = 0; i < productCards.length; i++) {
+                            productCards[i].style.display = "none";
+                        }
+                        viewAllBtn.innerText = "View all";
+                    }
+                }
+            </script>
+            <ul class="product-list" onclick="toggleProducts()">
+
+                <li class="product-item">
+
+                    <div class="product-card" tabindex="0">
+
+                        <figure class="product-banner">
+
+                            <img src="/Images/NEWEST NFTS/onetoone.jpg" height="" alt="Dimond riding a blue body art">
+
+                            <div class="product-actions">
+
+                                <button id="heartB" style="background-color: #FF0000;
+                                    border: none;
+                                    color: white;
+                                    padding: 1px 7px;
+                                    border-radius: 8px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    font-size: 16px;
+                                    margin: 4px 2px;
+                                    cursor: pointer;">&#9829;</button>
+                                <script>
+                                    var color = "#FF0000";
+                                    document.getElementById("heartB").addEventListener("click", function () {
+                                        if (color == "#FF0000") {
+                                            this.style.backgroundColor = "#00FF00";
+                                            color = "#00FF00";
+                                        } else {
+                                            this.style.backgroundColor = "#FF0000";
+                                            color = "#FF0000";
+                                        }
+                                    });
+                                </script>
+                            </div>
+
+                            <button class="place-bid-btn" onclick="showBidForm()">Place bid</button>
+
+                        </figure>
+
+                        <div class="product-content">
+
+                            <a href="#" class="h4 product-title">Dimond riding a blue body art</a>
+
+                            <div class="product-meta">
+
+                                <div class="product-author">
+
+                                    <figure class="author-img">
+                                        <img src="/Images/NEWEST NFTS/onetoone.jpg" width="30px" height="30px" alt="NFT">
+                                    </figure>
+
+                                </div>
+
+                                <div class="product-price">
+                                    <data value="0.568">0.568ETH</data>
+
+                                    <p class="label">Current Bid</p>
+                                </div>
+
+                            </div>
+
+                            <div class="product-footer">
+                                <p class="total-bid">12+ Place Bid.</p>
+
+                                <button class="tag">New</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li class="product-item">
+
+                    <div class="product-card" tabindex="0">
+
+                        <figure class="product-banner">
+
+                            <img src="/Images/NEWEST NFTS/onetotwo.jpg" alt="Dimond riding a blue body art">
+
+                            <div class="product-actions">
+
+                                <button id="heartBu" style="background-color: #FF0000;
+                            border: none;
+                            color: white;
+                            padding: 1px 7px;
+                            border-radius: 8px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 16px;
+                            margin: 4px 2px;
+                            cursor: pointer;">&#9829;</button>
+                                <script>
+                                    var color = "#FF0000";
+                                    document.getElementById("heartBu").addEventListener("click", function () {
+                                        if (color == "#FF0000") {
+                                            this.style.backgroundColor = "#00FF00";
+                                            color = "#00FF00";
+                                        } else {
+                                            this.style.backgroundColor = "#FF0000";
+                                            color = "#FF0000";
+                                        }
+                                    });
+                                </script>
+                            </div>
+
+                            <button class="place-bid-btn" onclick="showBidForm()">Place bid</button>
+
+                        </figure>
+
+                        <div class="product-content">
+
+                            <a href="#" class="h4 product-title">Dimond riding a blue body art</a>
+
+                            <div class="product-meta">
+
+                                <div class="product-author">
+
+                                    <figure class="author-img">
+                                        <img src="/Images/NEWEST NFTS/onetotwo.jpg" width="30px" height="30px"
+                                            alt="NFT VIRTUAL ONE">
+                                    </figure>
+                                </div>
+
+                                <div class="product-price">
+                                    <data value="0.568">0.568ETH</data>
+
+                                    <p class="label">Current Bid</p>
+                                </div>
+
+                            </div>
+
+                            <div class="product-footer">
+                                <p class="total-bid">12+ Place Bid.</p>
+
+                                <button class="tag">New</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <li class="product-item">
+
+                    <div class="product-card" tabindex="0">
+
+                        <figure class="product-banner">
+
+                            <img src="/Images/NEWEST NFTS/threetoone.jpg" alt="Dimond riding a blue body art">
+
+                            <div class="product-actions">
+                                <button id="heartBut" style="background-color: #FF0000;
+                            border: none;
+                            color: white;
+                            padding: 1px 7px;
+                            border-radius: 8px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 16px;
+                            margin: 4px 2px;
+                            cursor: pointer;">&#9829;</button>
+                                <script>
+                                    var color = "#FF0000";
+                                    document.getElementById("heartBut").addEventListener("click", function () {
+                                        if (color == "#FF0000") {
+                                            this.style.backgroundColor = "#00FF00";
+                                            color = "#00FF00";
+                                        } else {
+                                            this.style.backgroundColor = "#FF0000";
+                                            color = "#FF0000";
+                                        }
+                                    });
+                                </script>
+                            </div>
+
+                            <button class="place-bid-btn" onclick="showBidForm()">Place bid</button>
+
+                        </figure>
+
+                        <div class="product-content">
+
+                            <a href="#" class="h4 product-title">Dimond riding a blue body art</a>
+
+                            <div class="product-meta">
+
+                                <div class="product-author">
+
+                                    <figure class="author-img">
+                                        <img src="/Images/NEWEST NFTS/threetoone.jpg" width="30px" height="30px" alt="Jack Reacher">
+                                    </figure>
+
+                                </div>
+
+                                <div class="product-price">
+                                    <data value="0.568">0.568ETH</data>
+
+                                    <p class="label">Current Bid</p>
+                                </div>
+
+                            </div>
+
+                            <div class="product-footer">
+                                <p class="total-bid">12+ Place Bid.</p>
+
+                                <button class="tag">New</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <li class="product-item">
+
+                    <div class="product-card" tabindex="0">
+
+                        <figure class="product-banner">
+
+                            <img src="/Images/NEWEST NFTS/fourfour.jpg" alt="Dimond riding a blue body art">
+
+                            <div class="product-actions">
+
+                                <button id="heart" style="background-color: #FF0000;
+                                border: none;
+                                color: white;
+                                padding: 1px 7px;
+                                border-radius: 8px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 16px;
+                                margin: 4px 2px;
+                                cursor: pointer;">&#9829;
+                                </button>
+                                <script>
+                                    var color = "#FF0000";
+                                    document.getElementById("heart").addEventListener("click", function () {
+                                        if (color == "#FF0000") {
+                                            this.style.backgroundColor = "#00FF00";
+                                            color = "#00FF00";
+                                        } else {
+                                            this.style.backgroundColor = "#FF0000";
+                                            color = "#FF0000";
+                                        }
+                                    });
+                                </script>
+                            </div>
+
+                            <button class="place-bid-btn" onclick="showBidForm()">Place bid</button>
+
+                        </figure>
+
+                        <div class="product-content">
+
+                            <a href="#" class="h4 product-title">Dimond riding a blue body art</a>
+
+                            <div class="product-meta">
+
+                                <div class="product-author">
+
+                                    <figure class="author-img">
+                                        <img src="/Images/Images/NEWEST NFTS/fourfour.jpg" height="30px" width="30px"
+                                            alt="Jack Reacher">
+                                    </figure>
+                                </div>
+
+                                <div class="product-price">
+                                    <data value="0.568">0.568ETH</data>
+
+                                    <p class="label">Current Bid</p>
+                                </div>
+
+                            </div>
+
+                            <div class="product-footer">
+                                <p class="total-bid">12+ Place Bid.</p>
+
+                                <button class="tag">New</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </li>
+                <li class="product-item">
+
+                    <div class="product-card" tabindex="0">
+
+                        <figure class="product-banner">
+
+                            <img src="/Images/NEWEST NFTS/fivetoeye.jpg" alt="Dimond riding a blue body art">
+
+                            <div class="product-actions">
+
+                                <button id="heartButto" style="background-color: #FF0000;
+                                border: none;
+                                color: white;
+                                padding: 1px 7px;
+                                border-radius: 8px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 16px;
+                                margin: 4px 2px;
+                                cursor: pointer;">&#9829;</button>
+                                <script>
+                                    var color = "#FF0000";
+                                    document.getElementById("heartButto").addEventListener("click", function () {
+                                        if (color == "#FF0000") {
+                                            this.style.backgroundColor = "#00FF00";
+                                            color = "#00FF00";
+                                        } else {
+                                            this.style.backgroundColor = "#FF0000";
+                                            color = "#FF0000";
+                                        }
+                                    });
+                                </script>
+                            </div>
+                            <button class="place-bid-btn" onclick="showBidForm()">Place bid</button>
+
+                        </figure>
+
+                        <div class="product-content">
+
+                            <a href="#" class="h4 product-title">Dimond riding a blue body art</a>
+
+                            <div class="product-meta">
+
+                                <div class="product-author">
+
+                                    <figure class="author-img">
+                                        <img src="/Images/NEWEST NFTS/fivetoeye.jpg" height="30px" width="30px"
+                                            alt="Jack Reacher">
+                                    </figure>
+                                </div>
+
+                                <div class="product-price">
+                                    <data value="0.568">0.568ETH</data>
+
+                                    <p class="label">Current Bid</p>
+                                </div>
+
+                            </div>
+
+                            <div class="product-footer">
+                                <p class="total-bid">12+ Place Bid.</p>
+
+                                <button class="tag">New</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </li>
+                <li class="product-item">
+
+                    <div class="product-card" tabindex="0">
+
+                        <figure class="product-banner">
+
+                            <img src="/Images/NEWEST NFTS/devil.jpg" alt="Dimond riding a blue body art">
+
+                            <div class="product-actions">
+
+                                <button id="heartButton" style="background-color: #FF0000;
+                                border: none;
+                                color: white;
+                                padding: 1px 7px;
+                                border-radius: 8px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 16px;
+                                margin: 4px 2px;
+                                cursor: pointer;">&#9829;</button>
+                                <script>
+                                    var color = "#FF0000";
+                                    document.getElementById("heartButton").addEventListener("click", function () {
+                                        if (color == "#FF0000") {
+                                            this.style.backgroundColor = "#00FF00";
+                                            color = "#00FF00";
+                                        } else {
+                                            this.style.backgroundColor = "#FF0000";
+                                            color = "#FF0000";
+                                        }
+                                    });
+                                </script>
+                            </div>
+
+                            <button class="place-bid-btn" onclick="showBidForm()">Place bid</button>
+                        </figure>
+
+                        <div class="product-content">
+
+                            <a href="#" class="h4 product-title">Dimond riding a blue body art</a>
+
+                            <div class="product-meta">
+
+                                <div class="product-author">
+
+                                    <figure class="author-img">
+                                        <img src="/Images/NEWEST NFTS/devil.jpg" height="30px" width="30px"
+                                            alt="Jack Reacher">
+                                    </figure>
+                                </div>
+
+                                <div class="product-price">
+                                    <data value="0.568">0.568ETH</data>
+
+                                    <p class="label">Current Bid</p>
+                                </div>
+
+                            </div>
+
+                            <div class="product-footer">
+                                <p class="total-bid">12+ Place Bid.</p>
+
+                                <button class="tag">New</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </li>
+            </ul>
+
+        </div>
+    </main>
+    <span>
+        <footer>
+            <div class="footer">
+                <div class="row">
+                    <a href="https://www.facebook.com/login.php/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/accounts/login/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/google"><i class="fa fa-youtube"></i></a>
+                    <a href="https://twitter.com/login?lang=en"><i class="fa fa-twitter"></i></a>
+                </div>
+
+                <div class="row">
+                    <ul>
+                        <li><a href="/HTML/Developer Contact Form.html">Contact us</a></li>
+                        <li><a href="/HTML/OurServices.html">Our Services</a></li>
+                        <li><a href="/HTML/Privacy Policy.html">Privacy Policy</a></li>
+                        <li><a href="/HTML/Terms&Conditions.html">Terms & Conditions</a></li>
+                        <li><a href="/HTML/Career.html">Career</a></li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    Developers Copyright © 2023 Juniors Developers - All rights reserved || Designed By: kARLA - SAAD -
+                    RASHA - WALID
+                </div>
+            </div>
+        </footer>
+    </span>
+    <script>
+        function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "See more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "See less";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
+    <script src="/JavaScript/placebid.js"></script>
+</body>
+
+</html>

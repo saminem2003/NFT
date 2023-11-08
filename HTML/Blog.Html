@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="/CSS/indexfooterstyle.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+<header>
+    <div class="container">
+        <div class="header-right">
+            <div class="header-nav-wrapper">
+                <ul class="navbar-listing">
+                    <a href="#" class="logo">
+                        <img src="/Images/preview.avif" height="50px" alt="" srcset="">
+                    </a>
+                    <li><a href="/HTML/index.html">HOME</a></li>
+                    <li><a href="/HTML/About.html">about</a></li>
+                    <li><a href="/HTML/Collections.html">Collections</a></li>
+                    <li><a href="/HTML/Creators.html">Creators</a></li>
+                    <li><a href="#">Blog</a></li>
+
+                    <div class="navbar">
+                        <div class="dropdown">
+                            <button class="dropbtn">Explore
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="/HTML/CryptoOnline.html">Crypto-Online</a>
+                                <a href="/HTML/CurrencyConverter.html" style="font-size: 11px;">Check-Currency-Rate</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </ul>
+
+            </div>
+            <div class="header-actions">
+                <input type="search" placeholder="Search" class="search-field">
+
+                <a href="/HTML/Login.html"><button class="btn btn-primary">Sign in</button></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        color: inherit;
+        background-color: black;
+        color: white;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        display: none;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .overlay p {
+        color: white;
+        font-size: 18px;
+    }
+
+    .overlay img {
+        max-width: 100px;
+        margin-top: 9px;
+    }
+
+    .spbtn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 10px;
+        background-color: #805ce4;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 3px;
+        transition: background-color 0.3s ease-in-out;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    .spbtn:hover {
+        background-color: #c19dfa;
+    }
+
+    .swiper-container {
+        margin-top: 2em;
+    }
+
+    .swiper-slide {
+        text-align: center;
+    }
+
+    .swiper-slide img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const btn = document.getElementById("spbtn");
+        const imageContainer = document.getElementById("image-container");
+
+        imageContainer.style.display = "none";
+
+        btn.addEventListener("click", function () {
+            if (imageContainer.style.display === "none") {
+                imageContainer.style.display = "block";
+            } else {
+                imageContainer.style.display = "none";
+            }
+        });
+    });
+</script>
+
+<body>
+    <div class="container">
+        <h1>Sneak Peak Of Our Upcoming NFTs</h1>
+        <p>Click the button below to display a Sneak Peak:</p>
+        <button id="spbtn" class="spbtn">Sneak Peak</button>
+        <div id="image-container" class="image-container">
+            <img src="/Images/Barcode Image/monk.png" alt="Example NFT">
+            <div class="overlay">
+                <p>To view the complete collection, <br>Scan the code.</p>
+                <img src="/Images/Barcode Image/38931588-0175c1dcb5308b8611227d98d2c94dec.png" alt="Instagram Barcode">
+            </div>
+        </div>
+
+</body>
+
+</html>

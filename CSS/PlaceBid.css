@@ -1,0 +1,38 @@
+/* Add style to the bid form */
+.bid-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Add style to the input labels */
+.bid-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.bid-form button[type="submit"] {
+    margin-right: 20px;
+    padding-left: 90%;
+}
+
+/* Add style to the input fields */
+.bid-form input,
+.bid-form textarea {
+    display: block;
+    margin-bottom: 10px;
+    padding: 20px;
+    width: 100%;
+    border: 1px solid;
+}

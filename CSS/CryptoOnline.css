@@ -1,0 +1,153 @@
+body {
+    background-color: #303030;
+    color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+    margin-left: 5%;
+    display: block;
+    margin-right: 5%;
+}
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        text-align: justify;
+        text-justify: inter-word;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+}
+
+
+/* OUR API :: dc60a30bf57a201dc1566cfc3c0ebfbf565518e71b1ada5137a6d2ea0161df0b */
+h2 {
+    font-size: 1.25em;
+}
+
+p {
+    font-family: 'Red Hat Text', sans-serif;
+    color: #303030;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+
+    }
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    gap: 20px;
+}
+
+.btc,
+.ltc,
+.doge,
+.xrp,
+.bnb,
+.trx,
+.yfi,
+.cosmos,
+.ethereum {
+    display: grid;
+    justify-content: space-around;
+    max-width: 500px;
+    min-width: 250px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(50px, 60px) 1fr;
+    grid-template: "info" "chart";
+    border-radius: 30px;
+    background-color: rgb(51, 64, 74);
+    position: relative;
+}
+
+.btc {
+    box-shadow: 10px 10px 20px 1px rgba(247, 147, 26, 0.15);
+}
+
+.cosmos {
+    box-shadow: 10px 10px 20px 1px rgba(246, 49, 72, 0.15);
+}
+
+.ethereum {
+    box-shadow: 10px 10px 20px 1px rgba(78, 56, 216, 0.15);
+}
+
+.ltc {
+    box-shadow: 10px 10px 20px 1px rgba(78, 56, 216, 0.15);
+}
+
+.trx {
+    box-shadow: 10px 10px 20px 1px rgba(78, 56, 216, 0.15);
+}
+
+.yfi {
+    box-shadow: 10px 10px 20px 1px rgba(78, 56, 216, 0.15);
+}
+
+.bnb {
+    box-shadow: 10px 10px 20px 1px rgba(245, 12, 12, 0.15);
+}
+
+.xrp {
+    box-shadow: 10px 10px 20px 1px rgba(245, 12, 12, 0.15);
+}
+
+.doge {
+    box-shadow: 10px 10px 20px 1px rgba(78, 56, 216, 0.15);
+}
+
+.asset-info {
+    grid-area: info;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5% 0 5%;
+}
+
+.title {
+    display: inline-flex;
+}
+
+.card h1 {
+    margin-left: 10px;
+}
+
+.chart-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+}
+
+#bnbChart,
+#yfiChart,
+#LtcChart,
+#xrpChart,
+#tronChart,
+#btcChart,
+#cosmosChart,
+#dogeChart,
+#ethereumChart {
+    grid-area: chart;
+    border-radius: 0px 0px 30px 30px;
+    margin-top: auto;
+    position: relative;
+}
